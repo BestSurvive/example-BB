@@ -6,7 +6,8 @@ const rentSchema = new Schema({
     end:{type: Date, required: true},
     people:{ type: Schema.Types.ObjectId, ref:'User'}, //Chi ha preso in affitto
     cost: Number,
-    numberPeople: Number
+    numberPeople: Number,
+    house:{ type: Schema.Types.ObjectId, ref:'House'}, 
   });
   
   module.exports = mongoose.model('Rent', rentSchema);
